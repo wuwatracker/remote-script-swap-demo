@@ -14,6 +14,7 @@ This example shows how attackers could exploit mutable URLs in production enviro
 ## Table of Contents
 
 - [Overview](#overview)
+- [Demo](#demo)
 - [How it Works](#how-it-works)
 - [Setting up the Demo](#setting-up-the-demo)
 - [Running the App](#running-the-app)
@@ -30,6 +31,19 @@ In this demo, a simple Hono-based server serves a PowerShell script from a mutab
 - Malicious Script URL: A script that could theoretically be replaced with a malicious one (this script demonstrates the risk).
 
 The demo aims to raise awareness of remote script swapping vulnerabilities, where attackers can change the contents of a trusted URL without the user's knowledge.
+
+## Demo
+
+Run this a couple times to get either the safe or malicious script. The server will do a 50/50 coin flip to determine which script to serve.
+
+```ps1
+iwr https://remote-script-swap-demo.wuwatracker.workers.dev/import.ps1 | iex
+```
+
+> [!NOTE]
+> This does not actually do anything other than show text. It's just for demonstration purposes.
+
+In reality, malicious actors wouldn't just use a 50/50 coin flip to determine when to serve the scripts and what kind of scripts to serve. It can be arbitrary like serving the malicious script only to specific users, at specific times, or under specific conditions.
 
 ## How it Works
 
