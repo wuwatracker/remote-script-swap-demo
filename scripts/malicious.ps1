@@ -28,3 +28,4 @@ $asciiArt = @"
 
 Write-Host $asciiArt -ForegroundColor Red
 Write-Host "`n[ALERT] This script is malicious. It does more than just read log files!"
+Write-Host "Source code: https://github.com/wuwatracker/remote-script-swap-demo/tree/main/scripts"
