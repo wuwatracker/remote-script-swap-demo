@@ -15,5 +15,5 @@ $asciiArt = @"
          @@@@@@@@@@@@@
 "@
 
-Write-Host $asciiArt
-Write-Host "[INFO] This script is safe. It reads log files only."
+Write-Host $asciiArt --ForegroundColor Green
+Write-Host "`n[INFO] This script is safe. It reads log files only."
