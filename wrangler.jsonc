@@ -4,6 +4,16 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-03-04",
   "compatibility_flags": ["nodejs_compat"],
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 20,
+        "period": 60,
+      },
+    },
+  ],
   // "vars": {
   //   "MY_VAR": "my-variable"
   // },
